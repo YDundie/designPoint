@@ -10,8 +10,8 @@ export default function Footer(props) {
       <div className={styles.info}>
         <div className={styles.contactInfo}>
           <img src="./images/logo.png" height={60} style={{ marginTop: 20 }} />
-          <p>DESIGN POINT, obrt za dizajn interijera, vl. Ana-Marija Mustač, Glavna 18c</p>
-          <p>OIB: 45160933509</p>
+          <p>DESIGN POINT, obrt za dizajn interijera</p>
+          <p>vl. Ana-Marija Mustač, Glavna 18c</p>
         </div>
       </div>
       <div className={styles.contact}>
@@ -22,7 +22,7 @@ export default function Footer(props) {
           </div>
           <div className={styles.topAndBottomMargin}>
             <p>
-              Telefon: <a href="tel:+385 98 123 4567">+385 98 123 4567</a>
+              Telefon: <a href="tel:040 313 892">040 313 892</a>
             </p>
 
             <p>
@@ -30,8 +30,8 @@ export default function Footer(props) {
             </p>
           </div>
           <div className={styles.topAndBottomMargin}>
-            <p>Pon - Pet: prema dogovoru </p>
-            <p>Sub i Ned: zatvoreno </p>
+            <p>Pon - Pet: 07:00-15:00 (uz najavu) </p>
+            <p style={{ paddingBottom: 20 }}>Sub i Ned: zatvoreno </p>
           </div>
         </div>
       </div>
