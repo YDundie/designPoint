@@ -145,7 +145,7 @@
 
 @media (pointer: coarse) {
   .container {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .imageContent {
@@ -190,13 +190,37 @@
   }
   .designerTableImage {
     width: 100%;
+    text-align: center;
   }
   .designerTableContent {
     width: 100%;
+    max-width: 452px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    margin: 0 auto;
   }
 
   .testimonialsContainer {
     display: grid;
     padding: 20;
+  }
+}
+@media (max-width: 430px) {
+  .imageContent {
+    max-width: 600px;
+  }
+}
+@media (max-width: 330px) {
+  .imageContent {
+    max-width: 600px;
+  }
+  .line {
+    width: 26px;
+
+    margin: 4px 0;
   }
 }

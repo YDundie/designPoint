@@ -38,8 +38,8 @@ export default function Home() {
             <Service imgPath="./icons/smart-home.png" title="Smart home"></Service>
           </div>
           <div className={styles.usluge}>
-            <Service imgPath="./icons/layout.png" title="Vizualizacije za stolare"></Service>
-            <Service imgPath="./icons/kitchen.png" title="Home staging"></Service>
+            <Service imgPath="./icons/kitchen.png" title="Vizualizacije za stolare"></Service>
+            <Service imgPath="./icons/home.png" title="Home staging"></Service>
             <Service imgPath="./icons/tech-support.png" title="Savjetovanje"></Service>
           </div>
         </div>
@@ -65,8 +65,8 @@ export default function Home() {
         <h1 className={styles.clientsHeader}>ŠTO KAŽU klijenti?</h1>
 
         <div className={styles.testimonialsContainer}>
-          <ReviewCard image="./images/testimonial1.jpg" title={'Matjačić-Mesarić'} description={reviews[1]} date={'2021 g.'}></ReviewCard>
-          <ReviewCard image="./images/testimonial1.jpg" title={'Mateja L.'} description={reviews[0]} date={'27.05.2021'}></ReviewCard>
+          <ReviewCard image="./images/testimonial1.jpg" title={'Ivana M.'} description={reviews[1]} date={''}></ReviewCard>
+          <ReviewCard image="./images/testimonial1.jpg" title={'Mateja L.'} description={reviews[0]} date={''}></ReviewCard>
         </div>
       </div>
     </div>
