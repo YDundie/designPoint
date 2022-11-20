@@ -1,88 +1,91 @@
-.homeImage {
-  width: 100%;
-  left: 0;
-  height: 800px;
-  object-fit: cover;
-}
-
-.imageContainer {
-  position: relative;
-  max-width: 100%;
-  min-width: 800px;
-}
-
-.imageContent {
-  position: absolute;
-  top: 100px;
-  color: white;
-  text-align: left;
-  width: 100%;
-  padding: 0 2rem;
-  z-index: 2;
-  left: 0;
-}
-
-.imageButtons {
-  position: absolute;
-  bottom: 50px;
-  color: white;
-  text-align: left;
-  width: 100%;
-  padding: 0 2rem;
-  z-index: 2;
-  left: 0;
-}
-
-.designerTable {
-  position: relative;
-  display: flex;
-  padding: 100px 10rem;
- 
-}
-.designerTable::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  z-index: -2;
-  background-image: url("/images/bgdesigner.jpg");
-  background-size: cover;
-  filter: blur(30px);
- 
-
-}
-.designerTable::before {
-  background-image: radial-gradient(#bda521 20%, transparent 20%), radial-gradient(#c9c29b 20%, transparent 20%);
-  background-position: 0 18px, 18px 0px;
-
-  background-size: 50px 50px;
-  height: 300px;
-  width: 300px;
-  content: '';
-  position: absolute;
-  top: 33px;
-  left: 93px;
-  z-index: -1;
-}
-
-.designerTableImage {
-   width: 50%;
-  display: flex;
-}
-
-.designerTableContent {
-  width: 41.666666667%;
-}
-
-.designerImage {
-  width: 100%;
-  max-width: 450px;
-  max-height: auto;
-}
- 
-
-.container {
+.footer {
   padding: 0 15rem;
+  border-top: 8px solid var(--highlight-color);
+  background-color: var(--secondary-text-color);
+  color: #fff;
+  display: flex;
+  min-height: 220px;
+}
+
+.info {
+  justify-content: center;
+
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin-bottom: 30px;
+  max-width: 70%;
+}
+
+.contact {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  flex: 1;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.topAndBottomMargin {
+  margin-top: 20px;
+}
+
+.contactInfo {
+  margin-top: 20px;
+}
+
+.socials {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+}
+.socialsInfo {
+  margin-top: 20px;
+  display: flex;
+}
+.socialsInfo p {
+  font-size: 50px;
+  margin: 0 10px;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.socialsInfo p:hover {
+  color: var(--highlight-color);
+}
+
+@media (pointer: coarse) {
+  .footer {
+    padding: 0 2rem;
+    display: grid;
+    min-height: 220px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .socials {
+    padding-bottom: 20px;
+  }
+
+  .info h3 {
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .info p {
+    margin: 10px auto;
+    max-width: 70%;
+  }
 }

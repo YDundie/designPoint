@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 html,
 body {
   padding: 0;
@@ -6,8 +8,9 @@ body {
   --primary-text-color: #ece7e4;
   --secondary-text-color: #2e433c;
   --background-root-color: #ece7e4;
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
-  font-family: 'Raleway', sans-serif;
+  --highlight-color:#d9b894;
+  font-family: 'Mulish', sans-serif;
+
 }
 
 a {
@@ -19,7 +22,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -27,4 +30,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
