@@ -8,7 +8,8 @@ export default function FadeIn(props) {
       entries.forEach((entry) => setVisible(entry.isIntersecting));
     });
     observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+    if (observer.observe(domRef.current)) return () => observer.unobserve(domRef.current);
+    return;
   }, []);
   return (
     <div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
