@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import styles from '../styles/Home.module.css';
 import ReviewCard from '../components/ReviewCard';
 import Service from '../components/Service';
-// import FadeIn from '../components/FadeIn';
+import FadeIn from '../components/FadeIn';
 
 export default function Home() {
   const reviews = [
