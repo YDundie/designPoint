@@ -34,42 +34,42 @@ export default function Home() {
       <div className={styles.container}>
         <div className={` ${styles.uslugeContainer} ${styles.reveal}`}>
           <h1 className={styles.uslugeHeader}>Usluge</h1>
-          {/* <FadeIn> */}
-          <div className={styles.usluge}>
-            <Service imgPath="./icons/layout.png" title="Tlocrtni raspored namještaja"></Service>
-            <Service imgPath="./icons/designInt.png" title="Dizajn interijera"></Service>
-            <Service imgPath="./icons/smart-home.png" title="Smart home"></Service>
-          </div>
-          {/* </FadeIn> */}
-          {/* <FadeIn> */}
-          <div className={styles.usluge}>
-            <Service imgPath="./icons/kitchen.png" title="Vizualizacije za stolare"></Service>
-            <Service imgPath="./icons/home.png" title="Home staging"></Service>
-            <Service imgPath="./icons/tech-support.png" title="Savjetovanje"></Service>
-          </div>
-          {/* </FadeIn> */}
+          <FadeIn>
+            <div className={styles.usluge}>
+              <Service imgPath="./icons/layout.png" title="Tlocrtni raspored namještaja"></Service>
+              <Service imgPath="./icons/designInt.png" title="Dizajn interijera"></Service>
+              <Service imgPath="./icons/smart-home.png" title="Smart home"></Service>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className={styles.usluge}>
+              <Service imgPath="./icons/kitchen.png" title="Vizualizacije za stolare"></Service>
+              <Service imgPath="./icons/home.png" title="Home staging"></Service>
+              <Service imgPath="./icons/tech-support.png" title="Savjetovanje"></Service>
+            </div>
+          </FadeIn>
         </div>
         <div className={` ${styles.designerTable}  ${styles.reveal}`}>
           <div class={styles.designerTableImage}>
-            {/* <FadeIn> */}
-            <img src="./images/designer.jpg" className={styles.designerImage} />
-            {/* </FadeIn> */}
+            <FadeIn>
+              <img src="./images/designer.jpg" className={styles.designerImage} />
+            </FadeIn>
           </div>
           <div class={styles.designerTableContent}>
-            {/* <FadeIn> */}
-            <h2 className={styles.designerHeader}>
-              • <span className={styles.line}></span> Vaša dizajnerica
-            </h2>
-            <h3 className={styles.timesNewRomanFont}>Ja sam Ana-Marija Mustač, vaša dizajnerica interijera, a planski i sveobuhvatan pristup dizajnu interijera ono je od čega ne odstupam.</h3>
-            <p>Radim s osobama čija želja je urediti interijer koji je u skladu s njihovim afinitetima, životnim navikama i financijskim mogućnostima.</p>
-            <p>
-              Design Point nastao je s vizijom spajanja svih aspekata dizajna interijera u jednu točku od koje se polazi. Bilo da želite tlocrtno rješenje, vizualno rješenje s popratnom dokumentacijom ili pak vizualno rješenje s integriranom smart
-              home tehnologijom i popratnom dokumentacijom - na pravom ste mjestu!
-            </p>
-            <Button wide to="/workinprogress">
-              Saznajte više
-            </Button>
-            {/* </FadeIn> */}
+            <FadeIn>
+              <h2 className={styles.designerHeader}>
+                • <span className={styles.line}></span> Vaša dizajnerica
+              </h2>
+              <h3 className={styles.timesNewRomanFont}>Ja sam Ana-Marija Mustač, vaša dizajnerica interijera, a planski i sveobuhvatan pristup dizajnu interijera ono je od čega ne odstupam.</h3>
+              <p>Radim s osobama čija želja je urediti interijer koji je u skladu s njihovim afinitetima, životnim navikama i financijskim mogućnostima.</p>
+              <p>
+                Design Point nastao je s vizijom spajanja svih aspekata dizajna interijera u jednu točku od koje se polazi. Bilo da želite tlocrtno rješenje, vizualno rješenje s popratnom dokumentacijom ili pak vizualno rješenje s integriranom smart
+                home tehnologijom i popratnom dokumentacijom - na pravom ste mjestu!
+              </p>
+              <Button wide to="/workinprogress">
+                Saznajte više
+              </Button>
+            </FadeIn>
           </div>
         </div>
         <h1 className={styles.clientsHeader}>ŠTO KAŽU klijenti?</h1>
