@@ -9,6 +9,7 @@ body {
   --secondary-text-color: #2e433c;
   --background-root-color: #ece7e4;
   --highlight-color: #d9b894;
+  --highlight-color-active: #a78d71;
   font-family: 'Mulish', sans-serif;
 }
 

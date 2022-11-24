@@ -1,7 +1,11 @@
 import styles from '../styles/Service.module.css';
+import { useRouter } from 'next/router';
+
 export default function Service(props) {
+  const router = useRouter();
+
   return (
-    <div className={styles.service}>
+    <div className={styles.service} onClick={() => router.push(props.to)}>
       <div className={styles.serviceIcon}>
         <img src={props.imgPath} alt="service images" className={styles.serviceImage} />
       </div>

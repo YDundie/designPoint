@@ -37,16 +37,16 @@ export default function Home() {
           <h1 className={styles.uslugeHeader}>Usluge</h1>
           <FadeIn>
             <div className={styles.usluge}>
-              <Service imgPath="./icons/layout.png" title="Tlocrtni raspored namještaja"></Service>
-              <Service imgPath="./icons/designInt.png" title="Dizajn interijera"></Service>
-              <Service imgPath="./icons/smart-home.png" title="Smart home"></Service>
+              <Service to="/usluge/tlocrt" imgPath="./icons/layout.png" title="Tlocrtni raspored namještaja"></Service>
+              <Service to="/usluge/interijer" imgPath="./icons/designInt.png" title="Dizajn interijera"></Service>
+              <Service to="/usluge/smarthome" imgPath="./icons/smart-home.png" title="Smart home"></Service>
             </div>
           </FadeIn>
           <FadeIn>
             <div className={styles.usluge}>
-              <Service imgPath="./icons/kitchen.png" title="Vizualizacije za stolare"></Service>
-              <Service imgPath="./icons/home.png" title="Home staging"></Service>
-              <Service imgPath="./icons/tech-support.png" title="Savjetovanje"></Service>
+              <Service to="/usluge/stolari" imgPath="./icons/kitchen.png" title="Vizualizacije za stolare"></Service>
+              <Service to="/usluge/homestaging" imgPath="./icons/home.png" title="Home staging"></Service>
+              <Service to="/usluge/savjetovanje" imgPath="./icons/tech-support.png" title="Savjetovanje"></Service>
             </div>
           </FadeIn>
         </div>
@@ -76,8 +76,8 @@ export default function Home() {
         <h1 className={styles.clientsHeader}>ŠTO KAŽU klijenti?</h1>
 
         <div className={styles.testimonialsContainer}>
-          <ReviewCard image="./images/testimonial1.jpg" title={'Ivana M.'} description={reviews[1]} date={''}></ReviewCard>
-          <ReviewCard image="./images/testimonial1.jpg" title={'Mateja L.'} description={reviews[0]} date={''}></ReviewCard>
+          <ReviewCard title={'Ivana M.'} description={reviews[1]} date={''}></ReviewCard>
+          <ReviewCard title={'Mateja L.'} description={reviews[0]} date={''}></ReviewCard>
         </div>
       </div>
     </div>

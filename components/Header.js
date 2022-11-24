@@ -14,14 +14,14 @@ export default function Header() {
   return (
     <div>
       <div className={`${styles.container} ${styles.desktop}`}>
-        <img src="./images/logo.png" alt="logo" className={styles.logo} />
+        <img src="./images/logo.png" alt="logo" className={styles.logo} onClick={() => router.push('/')} />
         <Link href="/" className={`${styles.link} ${router.pathname === '/' ? styles.active : ''}`}>
           Naslovnica
         </Link>
         <Link href="/workinprogress" className={styles.link}>
           Projekti
         </Link>
-        <Link href="/usluge" className={`${styles.link} ${router.pathname === '/usluge' ? styles.active : ''}`}>
+        <Link href="/usluge" className={`${styles.link} ${router.pathname.includes('usluge') ? styles.active : ''}`}>
           Usluge
         </Link>
         <Link href="/workinprogress" className={styles.link}>
@@ -32,7 +32,7 @@ export default function Header() {
         </Link>
       </div>
       <div className={`${styles.container} ${styles.mobile}`}>
-        <img src="./images/logo.png" className={styles.logo} />
+        <img src="./images/logo.png" className={styles.logo} onClick={() => router.push('/')} />
         <p
           style={{ textAlign: 'right', flex: 1 }}
           onClick={() => {
@@ -52,7 +52,7 @@ export default function Header() {
           </p>
           <Link
             href="/"
-            className={`${styles.link} ${styles.active}`}
+            className={`${styles.link} ${router.pathname === '/' ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}
@@ -69,8 +69,8 @@ export default function Header() {
             Projekti
           </Link>
           <Link
-            href="/workinprogress"
-            className={styles.link}
+            href="/usluge"
+            className={`${styles.link} ${router.pathname.includes('usluge') ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}
