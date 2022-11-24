@@ -15,6 +15,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Design Point</title>
+        <meta name="description" content="Desing point - stvaramo bezvremenske interijere s naglaskom na udoban namještaj, skladne boje i hrabre teksture. " />
       </Head>
       <div className={styles.imageContainer}>
         <div className={`${styles.imageContent} ${styles.container}`}>
@@ -29,7 +30,7 @@ export default function Home() {
             VIŠE INFORMACIJA
           </Button>
         </div>
-        <img src="./images/welcomeRender.jpg" alt="" className={styles.homeImage} />
+        <img src="./images/welcomeRender.jpg" alt="welcome image" className={styles.homeImage} />
       </div>
       <div className={styles.container}>
         <div className={` ${styles.uslugeContainer} ${styles.reveal}`}>
@@ -52,7 +53,7 @@ export default function Home() {
         <div className={` ${styles.designerTable}  ${styles.reveal}`}>
           <div class={styles.designerTableImage}>
             <FadeIn>
-              <img src="./images/designer.jpg" className={styles.designerImage} />
+              <img src="./images/designer.jpg" alt="designer image" className={styles.designerImage} />
             </FadeIn>
           </div>
           <div class={styles.designerTableContent}>

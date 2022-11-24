@@ -1,5 +1,6 @@
 import styles from '../styles/Header.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function Header() {
@@ -8,17 +9,19 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const router = useRouter();
+
   return (
     <div>
       <div className={`${styles.container} ${styles.desktop}`}>
-        <img src="./images/logo.png" className={styles.logo} />
-        <Link href="/" className={`${styles.link} ${styles.active}`}>
+        <img src="./images/logo.png" alt="logo" className={styles.logo} />
+        <Link href="/" className={`${styles.link} ${router.pathname === '/' ? styles.active : ''}`}>
           Naslovnica
         </Link>
         <Link href="/workinprogress" className={styles.link}>
           Projekti
         </Link>
-        <Link href="/workinprogress" className={styles.link}>
+        <Link href="/usluge" className={`${styles.link} ${router.pathname === '/usluge' ? styles.active : ''}`}>
           Usluge
         </Link>
         <Link href="/workinprogress" className={styles.link}>

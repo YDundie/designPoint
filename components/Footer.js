@@ -9,7 +9,7 @@ export default function Footer(props) {
     <div className={styles.footer}>
       <div className={styles.info}>
         <div className={styles.contactInfo}>
-          <img src="./images/logo.png" height={60} style={{ marginTop: 20 }} />
+          <img src="./images/logo.png" alt="logo" height={60} style={{ marginTop: 20 }} />
           <p>DESIGN POINT, obrt za dizajn interijera</p>
           <p>vl. Ana-Marija Mustač, Glavna 18c</p>
         </div>
