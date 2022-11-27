@@ -42,10 +42,11 @@
   vertical-align: top;
   background-color: var(--primary-text-color);
   width: 50%;
-  height: 500px;
+  height: 650px;
   display: inline-block;
   border-radius: 5px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .contentImage {
@@ -146,7 +147,7 @@
 
 .parent > div > .mapLink {
   margin-left: 1.6rem;
-
+  font-weight: 600;
   color: var(--highlight-color);
   text-decoration: none;
   text-transform: uppercase;
@@ -163,6 +164,19 @@
 }
 .contentContainer {
   padding-top: 60px;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: url(/images/bgdesigner.jpg);
+  background-size: cover;
+  filter: blur(30px);
 }
 
 .modal {
@@ -244,6 +258,6 @@
   }
 
   .parent {
-    text-align: center;
+    text-align: left;
   }
 }

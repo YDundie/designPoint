@@ -35,6 +35,16 @@ a {
   visibility: visible;
 }
 
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

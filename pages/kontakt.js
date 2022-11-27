@@ -104,6 +104,8 @@ export default function Kontakt(props) {
         </div>
       </div>
       <div className={styles.contentSpacerRight}>
+        <h2>Kontaktirajte nas</h2>
+        <p>Povratno ćemo Vam se javiti na email koji navedete u obrascu u roku od 48 sati.</p>
         <Input placeholder="Ime i Prezime" onChange={(e) => onNameChange(e)} value={name} />
         <Input placeholder="E-mail" onChange={(e) => onEmailChange(e)} value={email} />
         <Input placeholder="Naslov" onChange={(e) => onTitleChange(e)} value={title} />
