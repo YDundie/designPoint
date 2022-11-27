@@ -40,12 +40,12 @@ export default function Footer(props) {
           <h3>Društvene mreže:</h3>
           <div className={styles.socialsInfo}>
             <p>
-              <Link href="">
+              <Link href="https://www.facebook.com/profile.php?id=100088107483725" target="_blank">
                 <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
               </Link>
             </p>
             <p>
-              <Link href="">
+              <Link href="https://www.instagram.com/design_point__/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
               </Link>
             </p>

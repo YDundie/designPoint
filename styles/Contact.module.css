@@ -1,0 +1,249 @@
+.uslugeHeaderConteiner {
+  display: flex;
+  align-items: center;
+}
+.designerHeader {
+  padding-top: 80px;
+  font-size: 1rem;
+  color: var(--highlight-color);
+  text-transform: uppercase;
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--highlight-color);
+  margin: 3px 0;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.uslugeHeaderText {
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+  padding-right: 1rem;
+}
+
+.contentSpacerLeft {
+  padding-right: 1rem;
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.contentSpacerLeft > p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--secondary-text-color);
+}
+
+.contentSpacerRight {
+  padding: 2rem;
+  vertical-align: top;
+  background-color: var(--primary-text-color);
+  width: 50%;
+  height: 500px;
+  display: inline-block;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.contentImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.button {
+  background-color: rgba(110, 94, 38, 0);
+  color: var(--highlight-color);
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--highlight-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.whiteButton {
+  background-color: rgba(110, 94, 38, 0);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-right: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--highlight-color-active);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid var(--highlight-color-active);
+}
+
+.whiteButton:hover {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  color: var(--highlight-color);
+  font-size: 1.3rem;
+  margin-top: 50px;
+}
+
+.parent > div > p {
+  margin-left: 1.6rem;
+  color: var(--secondary-text-color);
+}
+
+.parent > div > span {
+  color: var(--highlight-color);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.parent > div > .mapLink {
+  margin-left: 1.6rem;
+
+  color: var(--highlight-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.parent > div > .mapLink:hover {
+  color: var(--highlight-color-active);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container {
+  padding: 0 15rem;
+}
+.contentContainer {
+  padding-top: 60px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalContent {
+  width: 350px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalMessage {
+  font-size: 1.2rem;
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (pointer: coarse) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .contentSpacerLeft {
+    display: block;
+    width: 100%;
+  }
+
+  .contentSpacerRight {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .parent {
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div3 {
+    grid-area: 3 / 1 / 4 / 2;
+    margin-bottom: 20px;
+  }
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .parent {
+    text-align: center;
+  }
+}

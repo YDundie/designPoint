@@ -1,6 +1,7 @@
 import styles from '../../styles/ServiceDetail.module.css';
 import ServicesList from '../../components/ServicesList';
 import { useRouter } from 'next/router';
+import Button from '../../components/Button';
 
 export default function Tlocrt() {
   const router = useRouter();
@@ -16,12 +17,15 @@ export default function Tlocrt() {
         </div>
       </div>
       <div className={styles.contentSpacerLeft}>
-        <img src="https://picsum.photos/id/1/800/300" alt="Tlocrtni raspored namještaja" className={styles.contentImage} />
+        <img src="../images/tlocrt.png" alt="Tlocrtni raspored namještaja" className={styles.contentImage} />
         <p>Idejno rješenje rasporeda namještaja u obliku tlocrta s ciljem optimalne funkcionalnosti prostora i jednostavnijeg daljnjeg planiranja uređenja. </p>
         <p>
           Tlocrtno idejno rješenje idealno je kako bi se prostor koji uređujemo što bolje iskoristio u odnosu na naše dnevne aktivnosti. Također, važno je da se raspored namještaja planira tlocrtno, kako bi se izbjegla natrpanost istog jer ako
           željeni namještaj ne stane na 2D prostoru, još će manje stati u fizičkom prostoru.
         </p>
+        <Button wide to="/kontakt">
+          Kontaktirajte nas
+        </Button>
       </div>
       <div className={styles.contentSpacerRight}>
         <ServicesList active="tlocrt"></ServicesList>

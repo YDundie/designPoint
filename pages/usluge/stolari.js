@@ -1,6 +1,7 @@
 import styles from '../../styles/ServiceDetail.module.css';
 import ServicesList from '../../components/ServicesList';
 import { useRouter } from 'next/router';
+import Button from '../../components/Button';
 
 export default function Stolari() {
   const router = useRouter();
@@ -16,12 +17,15 @@ export default function Stolari() {
         </div>
       </div>
       <div className={styles.contentSpacerLeft}>
-        <img src="https://picsum.photos/id/4/800/300" alt="Vizualizacije za stolare" className={styles.contentImage} />
+        <img src="../images/vizualizacija.png" alt="Vizualizacije za stolare" className={styles.contentImage} />
         <p>Brz i efikasan način da se klijentu prikaže finalni izgled željenog komada namještaja.</p>
         <p>
           Stolar si, a 3D vizualizacije nisu nešto na što želiš utrošiti svoje vrijeme, no istovremeno klijentu želiš pokazati kako će finalno izgledati njihova kuhinja ili walk in ormar o kojem su oduvijek sanjali? Ok, onda si na pravom mjestu jer u
           tome ti definitivno mogu pomoći. Putem 3D vizualizacije prikazat ću namještaj po mjeri koji tvojem klijentu u potpunosti odgovara te ti tako i dodatno osigurati prodaju istog.
         </p>
+        <Button wide to="/kontakt">
+          Kontaktirajte nas
+        </Button>
       </div>
       <div className={styles.contentSpacerRight}>
         <ServicesList active="stolari"></ServicesList>

@@ -27,7 +27,7 @@ export default function Header() {
         <Link href="/workinprogress" className={styles.link}>
           O nama
         </Link>
-        <Link href="/workinprogress" className={styles.link}>
+        <Link href="/kontakt" className={`${styles.link} ${router.pathname.includes('kontakt') ? styles.active : ''}`}>
           Kontakt
         </Link>
       </div>
@@ -87,8 +87,8 @@ export default function Header() {
             O nama
           </Link>
           <Link
-            href="/workinprogress"
-            className={styles.link}
+            href="/kontakt"
+            className={`${styles.link} ${router.pathname.includes('kontakt') ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}

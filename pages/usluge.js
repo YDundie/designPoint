@@ -26,31 +26,19 @@ export default function Usluge() {
           title="Tlocrtni raspored namještaja"
           description="Idejno rješenje rasporeda namještaja u obliku tlocrta s ciljem optimalne funkcionalnosti prostora i jednostavnijeg daljnjeg planiranja uređenja."
           to="/usluge/tlocrt"
-          imgPath="https://picsum.photos/id/1/800/300"
+          imgPath="./images/tlocrt.png"
         />
         <ServiceCard
           icon="./icons/designInt.png"
           title="Dizajn interijera"
           description="3D vizualizacija prostora koji se uređuje s uključenim tlocrtnim rasporedom namještaja i drugim uslugama, ovisno o odabranoj opciji uređenja."
           to="/usluge/interijer"
-          imgPath="https://picsum.photos/id/95/800/300"
+          imgPath="./images/dizajnInterjera.png"
         />
-        <ServiceCard
-          icon="./icons/smart-home.png"
-          title="Smart home"
-          description="Tehnologija se uvukla u svaki aspekt naših života, pa zašto je onda ne bismo integrirali i u naš dom?"
-          to="/usluge/smarthome"
-          imgPath="https://picsum.photos/id/3/800/300"
-        />
-        <ServiceCard icon="./icons/kitchen.png" title="Vizualizacije za stolare" description="Brz i efikasan način da se klijentu prikaže finalni izgled željenog komada namještaja." to="/usluge/stolari" imgPath="https://picsum.photos/id/4/800/300" />
-        <ServiceCard
-          icon="./icons/home.png"
-          title="Home staging"
-          description="Predočite potencijalnim kupcima potencijal koji ima nekretnina koju prodajete uz male intervencije."
-          to="/usluge/homestaging"
-          imgPath="https://picsum.photos/id/7/800/300"
-        />
-        <ServiceCard imgPath="https://picsum.photos/id/55/800/300" title="Savjetovanje" description="Točno ste zamislili kako će vaš budući dom izgledati, no ipak fali još nešto?" to="/usluge/savjetovanje" icon="./icons/tech-support.png" />
+        <ServiceCard icon="./icons/smart-home.png" title="Smart home" description="Tehnologija se uvukla u svaki aspekt naših života, pa zašto je onda ne bismo integrirali i u naš dom?" to="/usluge/smarthome" imgPath="./images/smartHome.jpg" />
+        <ServiceCard icon="./icons/kitchen.png" title="Vizualizacije za stolare" description="Brz i efikasan način da se klijentu prikaže finalni izgled željenog komada namještaja." to="/usluge/stolari" imgPath="./images/vizualizacija.png" />
+        <ServiceCard icon="./icons/home.png" title="Home staging" description="Predočite potencijalnim kupcima potencijal koji ima nekretnina koju prodajete uz male intervencije." to="/usluge/homestaging" imgPath="./images/homestagingslika.png" />
+        <ServiceCard imgPath="./images/savjetovanje.png" title="Savjetovanje" description="Točno ste zamislili kako će vaš budući dom izgledati, no ipak fali još nešto?" to="/usluge/savjetovanje" icon="./icons/tech-support.png" />
       </div>
     </div>
   );

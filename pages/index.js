@@ -9,6 +9,7 @@ export default function Home() {
   const reviews = [
     'Od samog početka izražavam iznimno zadovoljstvo komunikacijom i individualnim pristupom.. Tijekom cijelog procesa poštivale su se naše želje i zahtjevi u potpunosti, plan je u svakom detalju podređen našem načinu života. Svaka prostorija dizajnirana je na temelju detaljnog razgovora i dogovora. Također, za pojedine prostorije ponuđeno nam je nekoliko mogućih inovativnih rješenja, od kojih smo mi odabrali onaj koji najviše odgovara našim potrebama. Svidjelo nam se da je kod bitnih elemenata (primjerice kutna garnitura u dnevnom boravku, rasvjeta, pločice, razni dodaci…), ponuđeno nekoliko primjera, sa odgovarajućom e-poveznicom koja usmjerava na detalje o proizvodu.  U konačnici, u zaista kratkom vremenskom razdoblju dobili smo plan dizajna interijera koji u potpunosti odgovara našim životnim potrebama i zahtjevima. Prijateljski pristup i otvorena komunikacija prisutni su od samog početka suradnje i činili su je iznimno ugodnom.  Osim vlastitog zadovoljstva, svjedočimo i zadovoljstvu izvođača radova kojima je navedeni plan od iznimne koristi tijekom realizacije.',
     'Projekt se sastoji od dizajna kuhinje, blagavaonice, dnevne sobe i kupanice te je bio izrađen od strane dizajnerice Ana-Marije Mustač. Dizajnerica je vrlo komunikativna i stručna, trudi se čim pobliže saznati stil i ukus klijenata, uvažava mišljenje i želje, daje prijedlog što i kako napraviti (izrada tlocrta i 3D prikaza u više verzija), ali nije nametljiva sa svojim idejama. Projekt se sastojao od izrade tlocrta i modela u 3D prikazu. Mi kao klijenti vrlo smo zadovoljni završnim projektom, on uključuje sve naše želje, prostor je lijepo prikazan sa svim završnim mjerama. Dizajnerica se potrudila u pronalasku svih traženih elemenata kako i glavnih tako i onih koji popune prostor. Izradila je i slike kako bi to u stvarnosti moglo izgledati tzv. rendere i nakon što smo vidjeli završni projekt želimo da naš budući dom tako izgleda. Ocjena 5/5',
+    'Ana-Marija je odlicna dizajnerica interijera. Krasi ju profesionalnost, kreativnost i brzina. Kad sam trebala samo ideju, ona je "samo ideju" dovela do savrsenstva - vrlo precizno i perfekcionisticki. Sve je predvidjela nista ne prepustivsi slucaju. Od srca preporucam 💙',
   ];
 
   return (
@@ -76,8 +77,9 @@ export default function Home() {
         <h1 className={styles.clientsHeader}>ŠTO KAŽU klijenti?</h1>
 
         <div className={styles.testimonialsContainer}>
-          <ReviewCard title={'Ivana M.'} description={reviews[1]} date={''}></ReviewCard>
           <ReviewCard title={'Mateja L.'} description={reviews[0]} date={''}></ReviewCard>
+          <ReviewCard title={'Ivana M.'} description={reviews[1]} date={''}></ReviewCard>
+          <ReviewCard title={'Marta S.'} description={reviews[2]} date={''}></ReviewCard>
         </div>
       </div>
     </div>

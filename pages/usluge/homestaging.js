@@ -1,6 +1,7 @@
 import styles from '../../styles/ServiceDetail.module.css';
 import ServicesList from '../../components/ServicesList';
 import { useRouter } from 'next/router';
+import Button from '../../components/Button';
 
 export default function Homestaging() {
   const router = useRouter();
@@ -16,12 +17,15 @@ export default function Homestaging() {
         </div>
       </div>
       <div className={styles.contentSpacerLeft}>
-        <img src="https://picsum.photos/id/7/800/300" alt="Home staging" className={styles.contentImage} />
+        <img src="../images/homestagingslika.png" alt="Home staging" className={styles.contentImage} />
         <p>Predočite potencijalnim kupcima potencijal koji ima nekretnina koju prodajete uz male intervencije.</p>
         <p>
           Kupcima je katkad teško vidjeti potencijal nekretnina koje se prodaju, no ukoliko se ona malo uljepša – namještaj se posloži na drugačiji način, dodaju se neki detalji, a neki drugi izbace – šanse za prodaju su veće! Ova usluga obuhvaća
           savjetovanje.
         </p>
+        <Button wide to="/kontakt">
+          Kontaktirajte nas
+        </Button>
       </div>
       <div className={styles.contentSpacerRight}>
         <ServicesList active="homestaging"></ServicesList>
