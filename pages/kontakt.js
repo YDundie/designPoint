@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Input from '../components/Input';
 import { useState } from 'react';
 
-export default function Kontakt(props) {
+export default function Kontakt() {
   const router = useRouter();
 
   const [name, setName] = useState('');
@@ -72,7 +72,7 @@ export default function Kontakt(props) {
           <h2 className={styles.designerHeader} onClick={() => router.push('/usluge')} style={{ cursor: 'pointer' }}>
             • <span className={styles.line}></span>Kontakt
           </h2>
-          <h1 className={styles.uslugeHeaderText}>Kontaktirajte nas</h1>
+          <h1 className={styles.uslugeHeaderText}>Kontakt Podaci</h1>
         </div>
       </div>
       <div className={styles.contentSpacerLeft}>
