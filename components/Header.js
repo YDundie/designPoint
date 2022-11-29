@@ -1,5 +1,6 @@
 import styles from '../styles/Header.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 export default function Header() {
@@ -8,28 +9,30 @@ export default function Header() {
     setMenuOpen(!menuOpen);
   };
 
+  const router = useRouter();
+
   return (
     <div>
       <div className={`${styles.container} ${styles.desktop}`}>
-        <img src="./images/logo.png" className={styles.logo} />
-        <Link href="/" className={`${styles.link} ${styles.active}`}>
+        <img src="./images/logo.png" alt="logo" className={styles.logo} onClick={() => router.push('/')} />
+        <Link href="/" className={`${styles.link} ${router.pathname === '/' ? styles.active : ''}`}>
           Naslovnica
         </Link>
         <Link href="/workinprogress" className={styles.link}>
           Projekti
         </Link>
-        <Link href="/workinprogress" className={styles.link}>
+        <Link href="/usluge" className={`${styles.link} ${router.pathname.includes('usluge') ? styles.active : ''}`}>
           Usluge
         </Link>
         <Link href="/workinprogress" className={styles.link}>
           O nama
         </Link>
-        <Link href="/workinprogress" className={styles.link}>
+        <Link href="/kontakt" className={`${styles.link} ${router.pathname.includes('kontakt') ? styles.active : ''}`}>
           Kontakt
         </Link>
       </div>
       <div className={`${styles.container} ${styles.mobile}`}>
-        <img src="./images/logo.png" className={styles.logo} />
+        <img src="./images/logo.png" className={styles.logo} onClick={() => router.push('/')} />
         <p
           style={{ textAlign: 'right', flex: 1 }}
           onClick={() => {
@@ -49,7 +52,7 @@ export default function Header() {
           </p>
           <Link
             href="/"
-            className={`${styles.link} ${styles.active}`}
+            className={`${styles.link} ${router.pathname === '/' ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}
@@ -66,8 +69,8 @@ export default function Header() {
             Projekti
           </Link>
           <Link
-            href="/workinprogress"
-            className={styles.link}
+            href="/usluge"
+            className={`${styles.link} ${router.pathname.includes('usluge') ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}
@@ -84,8 +87,8 @@ export default function Header() {
             O nama
           </Link>
           <Link
-            href="/workinprogress"
-            className={styles.link}
+            href="/kontakt"
+            className={`${styles.link} ${router.pathname.includes('kontakt') ? styles.active : ''}`}
             onClick={() => {
               toggleMenu();
             }}

@@ -9,7 +9,7 @@ export default function Footer(props) {
     <div className={styles.footer}>
       <div className={styles.info}>
         <div className={styles.contactInfo}>
-          <img src="./images/logo.png" height={60} style={{ marginTop: 20 }} />
+          <img src="./images/logo.png" alt="logo" height={60} style={{ marginTop: 20 }} />
           <p>DESIGN POINT, obrt za dizajn interijera</p>
           <p>vl. Ana-Marija Mustač, Glavna 18c</p>
         </div>
@@ -40,12 +40,12 @@ export default function Footer(props) {
           <h3>Društvene mreže:</h3>
           <div className={styles.socialsInfo}>
             <p>
-              <Link href="">
+              <Link href="https://www.facebook.com/profile.php?id=100088107483725" target="_blank">
                 <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
               </Link>
             </p>
             <p>
-              <Link href="">
+              <Link href="https://www.instagram.com/design_point__/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
               </Link>
             </p>

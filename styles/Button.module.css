@@ -1,10 +1,10 @@
 .button {
-  background-color: rgba(110, 94, 38,0);
+  background-color: rgba(110, 94, 38, 0);
   color: var(--highlight-color);
   padding: 10px;
   border-radius: 5px;
   border: 2px solid var(--highlight-color);
-   cursor: pointer;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -13,13 +13,13 @@
   text-align: center;
 }
 
-.whiteButton{
-  background-color: rgba(110, 94, 38,0);
+.whiteButton {
+  background-color: rgba(110, 94, 38, 0);
   color: #fff;
   padding: 10px;
   border-radius: 5px;
   border: 2px solid #fff;
-   cursor: pointer;
+  cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -29,7 +29,7 @@
 }
 
 .button:hover {
-  background-color: rgb(136, 111, 37);
+  background-color: var(--highlight-color-active);
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -38,12 +38,11 @@
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid var(--highlight-color);
-
+  border: 2px solid var(--highlight-color-active);
 }
 
-.whiteButton:hover{
-  background-color:#fff;
+.whiteButton:hover {
+  background-color: #fff;
   color: #000;
   padding: 10px;
   border-radius: 5px;
@@ -52,5 +51,5 @@
   font-size: 16px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 2px solid #fff
+  border: 2px solid #fff;
 }

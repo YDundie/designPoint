@@ -3,6 +3,13 @@
   text-align: center;
   flex: 1;
   display: flex;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.service:hover {
+  transition: all 0.1s ease-in;
+  transform: translateY(-10px);
 }
 
 .serviceIcon {
@@ -20,8 +27,6 @@
 
 .serviceTitle {
   padding-right: 2rem;
-
-  color: var(--secondary-text-color);
 }
 
 @media (pointer: coarse) {

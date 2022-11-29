@@ -1,0 +1,129 @@
+.cardContainer {
+  position: relative;
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  padding: 20px;
+  display: block;
+  min-width: 300px;
+  transition: all 0.3s ease-in-out;
+  margin: 8px 10px;
+  max-width: 380px;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  background: rgb(233, 233, 233);
+  cursor: pointer;
+}
+
+.cardImageContainer {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.cardImageDesign {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 30px;
+  text-align: center;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 3px solid var(--highlight-color);
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: all 0.1s ease-out;
+  transform: scaleX(0);
+}
+
+.cardImageDesignActive {
+  opacity: 1;
+  transition: all 0.1s ease-out;
+  transform: scaleX(1);
+}
+
+.cardContent {
+  flex: 1;
+}
+
+.cardTile {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--primary-text-color) 1px solid;
+}
+
+.cardButtons {
+  flex: 1;
+  color: var(--secondary-text-color);
+  padding-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cardDates {
+  flex: 1;
+  text-align: right;
+}
+.cardDate {
+  text-align: right;
+  margin: 0 20px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.cardBlur {
+  position: absolute;
+  border-radius: 5px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.learnMoreImage {
+  margin-top: 20px;
+  height: 20px;
+  width: auto;
+}
+
+@media (pointer: coarse) {
+  .card {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+}
