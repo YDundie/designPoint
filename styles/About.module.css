@@ -1,0 +1,107 @@
+.container {
+  padding: 0 5rem;
+  padding-top: 80px;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -0%;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: url(/images/bgdesigner.jpg);
+  background-size: cover;
+  filter: blur(30px);
+}
+
+.contentContainer {
+  padding: 100px 0;
+  display: flex;
+  position: relative;
+}
+
+.aboutUsImage {
+  flex: 2;
+  position: relative;
+}
+
+.imageHolder {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.designerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.aboutUsContent {
+  flex: 3;
+  position: relative;
+  padding: 40px;
+}
+
+.aboutUsContent::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: white;
+  z-index: -1;
+  border: 1px solid var(--highlight-color);
+  width: 100%;
+  height: 100%;
+}
+
+.designerHeader {
+  font-size: 1rem;
+  color: var(--highlight-color);
+  text-transform: uppercase;
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--highlight-color);
+  margin: 2px 0;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.link {
+  color: var(--highlight-color);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.3s all ease-in;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--highlight-color-active);
+  transition: 0.3s all ease-out;
+}
+
+@media (pointer: coarse) {
+  .container {
+    padding: 0 1rem;
+  }
+  .contentContainer {
+    flex-direction: column-reverse;
+  }
+  .imageHolder {
+    position: relative;
+    padding: 0;
+    left: 0;
+    top: 0;
+    padding-top: 50px;
+  }
+}

@@ -1,6 +1,6 @@
 .footer {
   padding: 0 15rem;
-  border-top: 8px solid var(--highlight-color);
+  /* border-top: 8px solid var(--highlight-color); */
   background-color: #d2dbd0;
   color: black;
   display: flex;
