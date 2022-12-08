@@ -1,0 +1,96 @@
+.wizard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.wizardButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.wizardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.wizardSteps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 10px;
+}
+
+.wizardStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.closeWizard {
+  position: relative;
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  margin-bottom: 11px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.closeButton {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: var(--highlight-color);
+  transition: 0.1s ease-in;
+}
+
+.wizardStepNumber {
+  width: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+}
+
+.failed {
+  background-color: rgb(255, 81, 0);
+  border-radius: 50%;
+  font-weight: 800;
+  color: white;
+  width: 30px;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+
+.done {
+  background-color: rgb(0, 255, 76);
+  border-radius: 50%;
+  font-weight: 800;
+  width: 40px;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+.active {
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
