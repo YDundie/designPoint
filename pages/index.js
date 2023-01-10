@@ -107,17 +107,10 @@ export default function Home() {
                 i sveobuhvatan pristup dizajnu interijera ono je od čega ne
                 odstupam.
               </h3>
+              <p>Radim s osobama čija želja je urediti interijer koji je u skladu s njihovim afinitetima, životnim navikama i financijskim mogućnostima.</p>
               <p>
-                Radim s osobama čija želja je urediti interijer koji je u skladu
-                s njihovim afinitetima, životnim navikama i financijskim
-                mogućnostima.
-              </p>
-              <p>
-                Design Point nastao je s vizijom spajanja svih aspekata dizajna
-                interijera u jednu točku od koje se polazi. Bilo da želite
-                tlocrtno rješenje, vizualno rješenje s popratnom dokumentacijom
-                ili pak vizualno rješenje s integriranom smart home tehnologijom
-                i popratnom dokumentacijom - na pravom ste mjestu!
+                Design Point nastao je s vizijom spajanja svih aspekata dizajna interijera u jednu točku od koje se polazi. Bilo da želite tlocrtno rješenje, vizualno rješenje s popratnom dokumentacijom ili pak vizualno rješenje s integriranom smart
+                home tehnologijom i popratnom dokumentacijom - na pravom ste mjestu!
               </p>
               <Button wide to="/onama">
                 Saznajte više

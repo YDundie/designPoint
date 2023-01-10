@@ -1,0 +1,148 @@
+.contentContainer {
+  display: flex;
+}
+
+.imageGalleryContainer {
+  /* flex: 3;
+  display: table;
+  text-align: center; */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  border: 2px solid var(--primary-text-color);
+  padding: 20px;
+}
+
+.imageGalleryContainer img:first-child,
+.imageGalleryContainer img:nth-child(2) {
+  grid-column: auto;
+}
+
+.imageInGallery {
+  width: 100%;
+  grid-column: auto;
+}
+.locationContainer {
+  flex: 1;
+  border: 1px solid var(--primary-text-color);
+  margin: 20px;
+  background-color: var(--primary-text-color);
+  height: 350px;
+}
+
+.imageInGallery {
+  display: inline;
+  object-fit: cover;
+  margin: 5px;
+}
+
+.imageInGallery:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+}
+
+.highlightedImage {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
+  /* bring your own prefixes */
+
+  height: 100%;
+  height: auto;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 101;
+  color: white;
+  border: none;
+  padding: 10px;
+  padding-right: 20px;
+  font-size: 20px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  border: 1px solid white;
+}
+
+.nextButton:hover {
+  cursor: pointer;
+  color: var(--primary-text-color);
+}
+
+.previousButton {
+  position: absolute;
+  top: 50%;
+
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 101;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.previousButton:hover {
+  cursor: pointer;
+  color: var(--primary-text-color);
+}
+
+.backgroundOverlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+.backgroundContainer {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 50;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+@media (pointer: coarse) {
+  .highlightedImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    width: 100%;
+  }
+}
