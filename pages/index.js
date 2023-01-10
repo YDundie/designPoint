@@ -24,10 +24,10 @@ export default function Home() {
           <h4 className={styles.header}>U Design Pointu stvaramo bezvremenske interijere s naglaskom na udoban namještaj, skladne boje i hrabre teksture.</h4>
         </div>
         <div className={`${styles.imageButtons} ${styles.container}`}>
-          <Button white to="/workinprogress">
+          <Button white to="/kontakt">
             KONTAKTIRAJE NAS
           </Button>
-          <Button white to="/workinprogress">
+          <Button white to="/usluge">
             VIŠE INFORMACIJA
           </Button>
         </div>
@@ -68,7 +68,7 @@ export default function Home() {
                 Design Point nastao je s vizijom spajanja svih aspekata dizajna interijera u jednu točku od koje se polazi. Bilo da želite tlocrtno rješenje, vizualno rješenje s popratnom dokumentacijom ili pak vizualno rješenje s integriranom smart
                 home tehnologijom i popratnom dokumentacijom - na pravom ste mjestu!
               </p>
-              <Button wide to="/workinprogress">
+              <Button wide to="/onama">
                 Saznajte više
               </Button>
             </FadeIn>

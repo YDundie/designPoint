@@ -3,8 +3,8 @@ import ServicesList from '../../components/ServicesList';
 import { useRouter } from 'next/router';
 import Button from '../../components/Button';
 import { useEffect, useState } from 'react';
-import Wizard from '../../components/Wizard';
 import Input from '../../components/Input';
+import { getFromStorage, setToStorage } from '../../Utils/LocalStorageUtils';
 
 export default function Savjetovanje() {
   const router = useRouter();
@@ -12,112 +12,106 @@ export default function Savjetovanje() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
 
-  const getFromStorage = (key) => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.getItem(key);
-    }
+  const [status, setStatus] = useState(['done', '', '', '', '', '', '', '', '']);
+
+  const [step, setStep] = useState(1);
+
+  const nextStep = () => {
+    setStep(step + 1);
   };
 
-  const setToStorage = (key, value) => {
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem(key, value);
-    }
+  const prevStep = () => {
+    setStep(step - 1);
   };
+
+  useEffect(() => {
+    if (getFromStorage('status') !== null) {
+      setStatus(getFromStorage('status'));
+    }
+    if (getFromStorage('name', true) !== null) {
+      setName(getFromStorage('name', true));
+    }
+    if (getFromStorage('address', true) !== null) {
+      setAddress(getFromStorage('address', true));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (name !== '' && address !== '') {
+      status[1] = 'done';
+      setStatus([...status]);
+    } else {
+      status[1] = 'failed';
+      setStatus([...status]);
+    }
+    setToStorage('status', JSON.stringify(status));
+  }, [name, address]);
 
   const onNameChange = (e) => {
     setName(e.target.value);
+    setToStorage('name', e.target.value);
   };
 
   const onAddressChange = (e) => {
     setAddress(e.target.value);
+    setToStorage('address', e.target.value);
   };
-
-  useEffect(() => {
-    console.log('name', name);
-    console.log('address', address);
-    if (name !== '' && address !== '') {
-      setToStorage(2, JSON.stringify({ status: 'done', name, address }));
-    } else {
-      setToStorage(2, JSON.stringify({ status: 'failed', name, address }));
-    }
-  }, [name, address]);
-
-  useEffect(function () {
-    setToStorage('1', JSON.stringify({ status: 'done' }));
-  }, []);
 
   return (
     <div className={styles.container}>
       <div className={`${styles.modal} ${showWizard ? styles.modalActive : ''} `}>
         <div className={styles.modalContent}>
-          <Wizard
-            onClickClose={() => {
-              setShowWizard(!showWizard);
-            }}
-            mandatorySteps={[2, 6, 8]}
-          >
-            <div className={styles.wizardStep}>
+          <div className={styles.modalHeader}>
+            <h2>Upitnik, DOLAZI USKORO JOS U IZRADI :)</h2>
+            <span className={styles.close} onClick={() => setShowWizard(false)}>
+              &times;
+            </span>
+          </div>
+          <div className={styles.wizardContent}>
+            <div className={styles.wizardSteps}>
+              {status.map((statusStep, index) => {
+                return (
+                  <div className={styles.wizardStep} onClick={() => setStep(index + 1)}>
+                    <div className={`${styles.wizardStepNumber} ${index + 1 === step ? styles.active : styles.inActive} ${styles[statusStep]}`}>{index + 1}</div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className={`${styles.wizardStepContent} ${step !== 1 ? styles.hideStep : ''}`}>
               <h2>Uvod</h2>
               <h3>Hello, ne brinite,</h3>
               <p>mozete proci kroz upitnik i ispuniti informacije za koje ste sigurni.</p>
               <p>Ukoliko ne znate neku informaciju, mozete je preskociti i vratiti se kasnije da dopunite upitnik.</p>
-              <p>
-                <p className={styles.done}>1</p> - Korak uspjesno rijesen
+              <p className={styles.done}>1</p> - Korak uspjesno rijesen
+              <br />
+              <br />
+              <p className={styles.failed}>2</p> - Neophodan korak / Fali informacija
+              <br />
+              <br />
+              <p className={styles.active} style={{ margin: '0 10px' }}>
+                3
               </p>
-              <p>
-                <p className={styles.failed}>2</p> - Fali informacija
-              </p>
-              <p>
-                <p className={styles.active}>3</p> - Treunutni korak
-              </p>
-              <p>
-                <span className={styles.notImp}>4</span> - Korak koji se moze preskociti
-              </p>
+              - Treunutni korak
+              <br />
+              <br />
+              <span className={styles.inActive} style={{ margin: '0 10px' }}>
+                4
+              </span>
+              - Korak koji se moze preskociti
             </div>
-            <div className={styles.wizardStep}>
+            <div className={`${styles.wizardStepContent} ${step !== 2 ? styles.hideStep : ''}`}>
               <Input placeholder="Ime i Prezime" onChange={(e) => onNameChange(e)} value={name} />
               <Input placeholder="Adressa" onChange={(e) => onAddressChange(e)} value={address} />
             </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Treci korak</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, nisl eget aliquam tincidunt, nisl elit aliquam</p>
-            </div>
-            <div className={styles.wizardStep}>
-              <h2>Posalji</h2>
-            </div>
-          </Wizard>
+          </div>
+          <div className={styles.wizardButtons}>
+            <Button static onClick={prevStep} disabled={step === 1}>
+              {`<`}
+            </Button>
+            <Button static onClick={nextStep} disabled={step === status.length}>
+              {`>`}
+            </Button>
+          </div>
         </div>
       </div>
       <div className={styles.contentContainer}>
